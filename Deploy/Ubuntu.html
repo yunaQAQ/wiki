@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="/wiki/static/css/colorful.css">
+    <link rel="Stylesheet" type="text/css" href="/wiki/static/css/style.css">
+    <link rel="shortcut icon" href="/wiki/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/wiki/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+    <title>Ubuntu - wiki - 个人知识库</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  </head>
+
+  <body>
+    <div id="container" class="typo">
+      
+<div id="header">
+  <div id="post-nav">
+    <a href="/wiki/">wiki - 个人知识库</a>
+    &nbsp;&#187;&nbsp;
+    <a href="/wiki/#Deploy">Deploy</a>
+    &nbsp;&#187;&nbsp;Ubuntu
+    <span class="updated">Updated&nbsp;
+    
+    </span>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div id="content">
+  <p>新创建的 Ubuntu 系统服务器，需要的操作。
+(注：从 16.04 开始可以 apt 替代 apt-get <a href="http://www.linuxidc.com/Linux/2016-05/131582.htm">使用APT简化命令行</a>)</p>
+<h2 id="_1">更新包</h2>
+<div class="hlcode"><pre><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+</pre></div>
+
+
+<h2 id="_2">创建管理员账号</h2>
+<div class="hlcode"><pre><span class="n">sudo</span> <span class="n">adduser</span> <span class="n">yuna</span> <span class="o">--</span><span class="n">ingroup</span> <span class="n">sudo</span>
+<span class="n">cd</span> <span class="o">~</span>
+</pre></div>
+
+
+<h2 id="_3">常用包</h2>
+<div class="hlcode"><pre><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">git</span><span class="o">-</span><span class="n">core</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">nginx</span><span class="o">-</span><span class="n">core</span>
+</pre></div>
+  
+</div>
+    </div>
+    <div id="footer">
+      <div class="footer-left">
+        <p>
+        Copyright © 2017 .
+        Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+        Theme by <a href="https://git.coding.net/tankywoo/yasimple_x2.git" target="_blank">YASimple_X2</a>.
+        </p>
+      </div> <!-- end footer-left -->
+      <div class="footer-right">
+        <p>Site Generated 2017-04-15 11:49:13</p>
+      </div> <!-- end footer-right -->
+    </div>
+
+    
+    
+  </body>
+</html>

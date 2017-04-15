@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="/wiki/static/css/colorful.css">
+    <link rel="Stylesheet" type="text/css" href="/wiki/static/css/style.css">
+    <link rel="shortcut icon" href="/wiki/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/wiki/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+    <title>安装 Nvm&Nodejs - wiki - 个人知识库</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  </head>
+
+  <body>
+    <div id="container" class="typo">
+      
+<div id="header">
+  <div id="post-nav">
+    <a href="/wiki/">wiki - 个人知识库</a>
+    &nbsp;&#187;&nbsp;
+    <a href="/wiki/#Mac">Mac</a>
+    &nbsp;&#187;&nbsp;安装 Nvm&Nodejs
+    <span class="updated">Updated&nbsp;
+    2017-04-15 11:25
+    </span>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div id="content">
+  <p>我们使用 nvm 来管理 node 的版本。
+nvm 的全称是 Node Version Manager，之所以需要这个工具，是因为 Node.js 的各种特性都没有稳定下来，所以我们经常由于老项目或尝新的原因，需要切换各种版本。</p>
+<h2 id="nvm">先安装一个 <a href="https://github.com/creationix/nvm">nvm</a></h2>
+<div class="hlcode"><pre><span class="n">curl</span> <span class="o">-</span><span class="n">o</span><span class="o">-</span> <span class="n">https</span><span class="o">:</span><span class="c1">//raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</span>
+</pre></div>
+
+
+<p>安装完成后，你的 shell 里面应该就有个 nvm 命令了，调用它试试。</p>
+<div class="hlcode"><pre><span class="n">nvm</span>
+</pre></div>
+
+
+<p>当看到有输出时，则 nvm 安装成功。</p>
+<h2 id="node">安装 Node</h2>
+<p>使用 nvm 的命令安装 Node.js 最新稳定版。</p>
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">install</span> <span class="mf">6.2.2</span>
+</pre></div>
+
+
+<p>安装完成后，查看一下。</p>
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">ls</span>
+</pre></div>
+
+
+<p>这时候可以看到自己安装的所有 Node.js 版本。</p>
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">use</span> <span class="mf">6.2.2</span>
+</pre></div>
+
+
+<p>告诉 nvm  我们使用 6.2.2的版本</p>
+<p>OK，我们在终端中输入</p>
+<div class="hlcode"><pre><span class="n">node</span>
+</pre></div>
+
+
+<p>REPL(read–eval–print loop) 应该就出来了，那我们就成功了。</p>
+<p>随便敲两行命令玩玩吧。</p>
+<p>比如 <code>&gt; while (true) {}</code>，这时你的 CPU 应该会飚高。</p>
+<h2 id="_1">完善安装</h2>
+<p>上述过程完成后，有时会出现，当开启一个新的 shell 窗口时，找不到 node 命令的情况。</p>
+<p>这种情况一般来自两个原因</p>
+<p>一、shell 不知道 nvm 的存在</p>
+<p>二、nvm 已经存在，但是没有 default 的 Node.js 版本可用。</p>
+<p>解决方式：</p>
+<p>一、检查 ~/.profile 或者 ~/.bash_profile 中有没有这样两句</p>
+<div class="hlcode"><pre><span class="n">export</span> <span class="n">NVM_DIR</span><span class="o">=</span><span class="s">&quot;/Users/YOURUSERNAME/.nvm&quot;</span>
+<span class="p">[</span> <span class="o">-</span><span class="n">s</span> <span class="s">&quot;$NVM_DIR/nvm.sh&quot;</span> <span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="p">.</span> <span class="s">&quot;$NVM_DIR/nvm.sh&quot;</span>  <span class="err">#</span> <span class="n">This</span> <span class="n">loads</span> <span class="n">nvm</span>
+</pre></div>
+
+
+<p>没有的话，加进去。</p>
+<p>这两句会在 bash 启动的时候被调用，然后注册 nvm 命令。</p>
+<p>二、</p>
+<p>调用</p>
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">ls</span>
+</pre></div>
+
+
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">alias</span> <span class="k">default</span> <span class="mf">6.2.2</span>
+</pre></div>
+
+
+<p>再</p>
+<div class="hlcode"><pre><span class="n">nvm</span> <span class="n">ls</span>
+</pre></div>
+
+
+<p>看一下</p>
+  
+</div>
+    </div>
+    <div id="footer">
+      <div class="footer-left">
+        <p>
+        Copyright © 2017 .
+        Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+        Theme by <a href="https://git.coding.net/tankywoo/yasimple_x2.git" target="_blank">YASimple_X2</a>.
+        </p>
+      </div> <!-- end footer-left -->
+      <div class="footer-right">
+        <p>Site Generated 2017-04-15 11:49:13</p>
+      </div> <!-- end footer-right -->
+    </div>
+
+    
+    
+  </body>
+</html>
